@@ -1,0 +1,2189 @@
+#2019-10-22 20:01:10 | took 1ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-22 20:01:10 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-22 20:01:10 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-22 20:01:10 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-22 20:01:10 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-22 20:01:10 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-22 20:01:10 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-22 20:01:10 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-22 20:01:10 | took 5ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-22 20:01:10 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-22 20:01:10 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-22 20:01:15 | took 4ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='1330b62c-6bc5-48b5-a69a-f05e477af51f';
+#2019-10-22 20:01:15 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '1330b62c-6bc5-48b5-a69a-f05e477af51f');
+#2019-10-22 20:01:15 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-22 20:01:15 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='fa77169e-8a4a-434e-be64-d7d5b3fe04e7';
+#2019-10-22 20:01:15 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', 'fa77169e-8a4a-434e-be64-d7d5b3fe04e7');
+#2019-10-22 20:01:15 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-22 20:01:15 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='bc5d1f3e-e551-41bc-8cf3-0a316a5c9699';
+#2019-10-22 20:01:15 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', 'bc5d1f3e-e551-41bc-8cf3-0a316a5c9699');
+#2019-10-22 20:01:15 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-22 20:02:36 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-22 20:02:36 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-22 20:02:36 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-22 20:02:36 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-22 20:02:36 | took 3ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-22 20:02:42 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-22 20:02:42 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-22 20:02:42 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-22 20:02:42 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-22 20:02:42 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-22 20:02:42 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-22 20:02:42 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-22 20:02:42 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-22 20:02:42 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-22 20:02:42 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-22 20:02:42 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-22 20:02:47 | took 4ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='35bc8ef0-2504-4f5b-98f4-067eb790d88d';
+#2019-10-22 20:02:47 | took 1ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '35bc8ef0-2504-4f5b-98f4-067eb790d88d');
+#2019-10-22 20:02:47 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-22 20:02:47 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='4ee379d4-c476-4c99-a464-21d1b1d82aa5';
+#2019-10-22 20:02:47 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', '4ee379d4-c476-4c99-a464-21d1b1d82aa5');
+#2019-10-22 20:02:47 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-22 20:02:47 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='b79ed4cb-b74f-4cd8-9f51-0744e967e7d0';
+#2019-10-22 20:02:47 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', 'b79ed4cb-b74f-4cd8-9f51-0744e967e7d0');
+#2019-10-22 20:02:47 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-22 20:09:57 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-22 20:09:57 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-22 20:09:57 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-22 20:09:57 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-22 20:09:57 | took 2ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 21:06:28 | took 2ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:06:28 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:06:28 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:06:28 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:06:28 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:06:28 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 21:06:28 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 21:06:28 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:06:28 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 21:06:28 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 21:06:28 | took 4ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 21:06:36 | took 26ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='14f221b8-c609-4ce4-9459-0ab19aa8e6bb';
+#2019-10-24 21:06:36 | took 1ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '14f221b8-c609-4ce4-9459-0ab19aa8e6bb');
+#2019-10-24 21:06:36 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:06:36 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='a479a873-3689-4e81-b6ae-a48935845bdb';
+#2019-10-24 21:06:36 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', 'a479a873-3689-4e81-b6ae-a48935845bdb');
+#2019-10-24 21:06:36 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:06:36 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='b1ce7de0-a7f9-419e-9254-16ca9740314f';
+#2019-10-24 21:06:36 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', 'b1ce7de0-a7f9-419e-9254-16ca9740314f');
+#2019-10-24 21:06:36 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:09:24 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:09:24 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:09:24 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:09:24 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:09:24 | took 4ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 21:09:40 | took 4ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:09:40 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:09:40 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:09:40 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:09:40 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:09:40 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 21:09:40 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 21:09:40 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:09:40 | took 10ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 21:09:40 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 21:09:40 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 21:09:46 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='3246e1ae-86bd-4ef3-977b-3203aa9aff5d';
+#2019-10-24 21:09:46 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '3246e1ae-86bd-4ef3-977b-3203aa9aff5d');
+#2019-10-24 21:09:46 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:09:46 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='d001b46e-0358-4d3d-90cc-ee7397cd0f1e';
+#2019-10-24 21:09:46 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', 'd001b46e-0358-4d3d-90cc-ee7397cd0f1e');
+#2019-10-24 21:09:46 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:09:46 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='3afcffa5-4265-45e8-ae01-fac7fd013b4f';
+#2019-10-24 21:09:46 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', '3afcffa5-4265-45e8-ae01-fac7fd013b4f');
+#2019-10-24 21:09:46 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:11:52 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:11:52 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:11:52 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:11:52 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:11:52 | took 4ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 21:12:06 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:12:06 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:12:06 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:12:06 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:12:06 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:12:06 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 21:12:06 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 21:12:06 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:12:06 | took 5ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 21:12:06 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 21:12:06 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 21:12:15 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='11c3a7a1-154a-4edd-93f1-a7f6f2d5fc1d';
+#2019-10-24 21:12:15 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '11c3a7a1-154a-4edd-93f1-a7f6f2d5fc1d');
+#2019-10-24 21:12:15 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:12:15 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='6d57790c-2a2b-4d07-ad56-8c57337ec8f6';
+#2019-10-24 21:12:15 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', '6d57790c-2a2b-4d07-ad56-8c57337ec8f6');
+#2019-10-24 21:12:15 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:12:15 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='859f194f-3a04-40e7-9400-7710ed9d3e98';
+#2019-10-24 21:12:15 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', '859f194f-3a04-40e7-9400-7710ed9d3e98');
+#2019-10-24 21:12:15 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:14:35 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:14:35 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:14:35 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:14:35 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:14:35 | took 3ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 21:14:43 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:14:43 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:14:43 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:14:43 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:14:43 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:14:43 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 21:14:43 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 21:14:43 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:14:43 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 21:14:43 | took 3ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 21:14:43 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 21:15:41 | took 4ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='41f617ec-9fd0-49b9-8129-275f721b0db3';
+#2019-10-24 21:15:41 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '41f617ec-9fd0-49b9-8129-275f721b0db3');
+#2019-10-24 21:15:41 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:15:41 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='ea3d1045-88ff-4394-a1fe-233f78be44b4';
+#2019-10-24 21:15:41 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', 'ea3d1045-88ff-4394-a1fe-233f78be44b4');
+#2019-10-24 21:15:41 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:15:41 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='9f2a95a8-7255-48ae-bbd3-90112574cf3d';
+#2019-10-24 21:15:41 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', '9f2a95a8-7255-48ae-bbd3-90112574cf3d');
+#2019-10-24 21:15:41 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:17:03 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:17:03 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:17:03 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:17:03 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:17:03 | took 4ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 21:21:40 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:21:40 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:21:40 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:21:40 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:21:40 | took 10ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:21:40 | took 2ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 21:21:40 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 21:21:40 | took 2ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:21:40 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 21:21:40 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 21:21:40 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 21:21:45 | took 4ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='226e1aae-b35b-4108-86b3-7a58664af59a';
+#2019-10-24 21:21:45 | took 1ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '226e1aae-b35b-4108-86b3-7a58664af59a');
+#2019-10-24 21:21:45 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:21:45 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='c5c65f38-b133-4807-be23-941b160850c5';
+#2019-10-24 21:21:45 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', 'c5c65f38-b133-4807-be23-941b160850c5');
+#2019-10-24 21:21:45 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:21:45 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='fb996110-4364-4faa-89ee-702dade1be21';
+#2019-10-24 21:21:45 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', 'fb996110-4364-4faa-89ee-702dade1be21');
+#2019-10-24 21:21:45 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:23:11 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:23:11 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:23:11 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:23:11 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:23:11 | took 5ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 21:26:01 | took 4ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:26:01 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:26:01 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:26:01 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:26:01 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:26:01 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 21:26:01 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 21:26:01 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:26:01 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 21:26:01 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 21:26:01 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 21:26:10 | took 4ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='73a39345-7ffa-484a-87b0-b67d99af56ee';
+#2019-10-24 21:26:10 | took 1ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '73a39345-7ffa-484a-87b0-b67d99af56ee');
+#2019-10-24 21:26:10 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:26:10 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='c33ee72d-f4bd-4c5b-b232-90452c0653f5';
+#2019-10-24 21:26:10 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', 'c33ee72d-f4bd-4c5b-b232-90452c0653f5');
+#2019-10-24 21:26:10 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:26:10 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='3f7c4641-bb11-48df-bd87-fd033f9b3957';
+#2019-10-24 21:26:10 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', '3f7c4641-bb11-48df-bd87-fd033f9b3957');
+#2019-10-24 21:26:10 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:28:50 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:28:50 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:28:50 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:28:50 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:28:50 | took 4ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 21:28:56 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:28:56 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:28:56 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:28:56 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:28:56 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:28:56 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 21:28:56 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 21:28:56 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:28:56 | took 5ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 21:28:56 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 21:28:56 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 21:29:01 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='89b05886-dd44-4876-8c12-a3face643b19';
+#2019-10-24 21:29:01 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '89b05886-dd44-4876-8c12-a3face643b19');
+#2019-10-24 21:29:01 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:29:01 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='d04d8bd8-0a8d-462c-990f-6efaa6c55050';
+#2019-10-24 21:29:01 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', 'd04d8bd8-0a8d-462c-990f-6efaa6c55050');
+#2019-10-24 21:29:01 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:29:01 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='d3c99712-f3a5-42ed-b22a-4129ecccc41c';
+#2019-10-24 21:29:01 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', 'd3c99712-f3a5-42ed-b22a-4129ecccc41c');
+#2019-10-24 21:29:01 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 21:30:47 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:30:47 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:30:47 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:30:47 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:30:47 | took 4ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 21:34:13 | took 4ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:34:13 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:34:13 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:34:13 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:34:13 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:34:13 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 21:34:13 | took 2ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 21:34:13 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:34:13 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 21:34:13 | took 3ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 21:34:13 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 21:34:19 | took 2ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:34:19 | took 1ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:34:19 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:34:19 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:34:19 | took 8ms | statement | connection 7| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 21:54:25 | took 4ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:54:25 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:54:25 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:54:25 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:54:25 | took 10ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:54:25 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 21:54:25 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 21:54:25 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:54:25 | took 9ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 21:54:25 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 21:54:25 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 21:54:26 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:54:26 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:54:26 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:54:26 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:54:26 | took 4ms | statement | connection 7| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 21:56:02 | took 4ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:56:02 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:56:02 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:56:02 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:56:02 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:56:02 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 21:56:02 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 21:56:02 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 21:56:02 | took 5ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 21:56:02 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 21:56:02 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 21:56:05 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 21:56:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 21:56:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 21:56:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 21:56:05 | took 10ms | statement | connection 7| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 22:00:21 | took 4ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:00:21 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:00:21 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:00:21 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:00:21 | took 10ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:00:21 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 22:00:21 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 22:00:21 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:00:21 | took 5ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 22:00:21 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 22:00:21 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 22:00:47 | took 4ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='c450e95f-f231-4e61-a385-5cc9dccb8317';
+#2019-10-24 22:00:47 | took 1ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', 'c450e95f-f231-4e61-a385-5cc9dccb8317');
+#2019-10-24 22:00:47 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:00:47 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='eeb3d8c6-cef1-4a87-ac46-d9299588afac';
+#2019-10-24 22:00:47 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', 'eeb3d8c6-cef1-4a87-ac46-d9299588afac');
+#2019-10-24 22:00:47 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:00:47 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='4ae83302-f620-40b8-b17b-ded72cbb906c';
+#2019-10-24 22:00:47 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', '4ae83302-f620-40b8-b17b-ded72cbb906c');
+#2019-10-24 22:00:47 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:02:06 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:02:06 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:02:06 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:02:06 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:02:06 | took 3ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 22:02:15 | took 4ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:02:15 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:02:15 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:02:15 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:02:15 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:02:15 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 22:02:15 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 22:02:15 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:02:15 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 22:02:15 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 22:02:15 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 22:02:21 | took 5ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='136dd27a-abb0-40f8-8469-93e73ccee593';
+#2019-10-24 22:02:21 | took 1ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '136dd27a-abb0-40f8-8469-93e73ccee593');
+#2019-10-24 22:02:21 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:02:21 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='5eb669f6-e16a-478b-98e6-0d2d942bd4ff';
+#2019-10-24 22:02:21 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', '5eb669f6-e16a-478b-98e6-0d2d942bd4ff');
+#2019-10-24 22:02:21 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:02:21 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='af77dcd6-e776-495a-954e-5e7ffbccca87';
+#2019-10-24 22:02:21 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', 'af77dcd6-e776-495a-954e-5e7ffbccca87');
+#2019-10-24 22:02:21 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:11:29 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:11:29 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:11:29 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:11:29 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:11:29 | took 5ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 22:13:11 | took 4ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:13:11 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:13:11 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:13:11 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:13:11 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:13:11 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 22:13:11 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 22:13:11 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:13:11 | took 5ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 22:13:11 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 22:13:11 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 22:13:12 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:13:12 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:13:12 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:13:12 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:13:12 | took 9ms | statement | connection 7| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 22:13:37 | took 1ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:13:37 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:13:37 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:13:37 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:13:37 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:13:37 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 22:13:37 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 22:13:37 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:13:37 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 22:13:37 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 22:13:37 | took 3ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 22:19:29 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:19:29 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:19:29 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:19:29 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:19:29 | took 3ms | statement | connection 7| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 22:19:35 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:19:35 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:19:35 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:19:35 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:19:35 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:19:35 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 22:19:35 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 22:19:35 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:19:35 | took 5ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 22:19:35 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 22:19:35 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 22:19:48 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='610ee21f-519f-4e0d-995a-65f53cf28c74';
+#2019-10-24 22:19:48 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '610ee21f-519f-4e0d-995a-65f53cf28c74');
+#2019-10-24 22:19:48 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:19:48 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='48c8199b-9af6-4be4-b971-6a40e1e9d6c7';
+#2019-10-24 22:19:48 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', '48c8199b-9af6-4be4-b971-6a40e1e9d6c7');
+#2019-10-24 22:19:48 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:19:48 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='7221e59c-3bc2-4a2c-95fe-f57328c644f8';
+#2019-10-24 22:19:48 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', '7221e59c-3bc2-4a2c-95fe-f57328c644f8');
+#2019-10-24 22:19:48 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:22:16 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='46f86dd7-9622-4eb6-b349-59f986f50f09';
+#2019-10-24 22:22:16 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '46f86dd7-9622-4eb6-b349-59f986f50f09');
+#2019-10-24 22:22:16 | took 0ms | commit | connection 7| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:22:16 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='d4bab251-62e5-4ae3-a532-b0dc99cef411';
+#2019-10-24 22:22:16 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', 'd4bab251-62e5-4ae3-a532-b0dc99cef411');
+#2019-10-24 22:22:16 | took 0ms | commit | connection 7| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:22:16 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='7597465e-6ea8-4419-8fba-47393bdee6ad';
+#2019-10-24 22:22:16 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', '7597465e-6ea8-4419-8fba-47393bdee6ad');
+#2019-10-24 22:22:16 | took 0ms | commit | connection 7| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:23:34 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:23:34 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:23:34 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:23:34 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:23:34 | took 3ms | statement | connection 9| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 22:23:41 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:23:41 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:23:41 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:23:41 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:23:41 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:23:41 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 22:23:41 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 22:23:41 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:23:41 | took 26ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 22:23:41 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 22:23:41 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 22:24:22 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='5db798d3-521b-431d-9697-d7db47cdd1d8';
+#2019-10-24 22:24:22 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '5db798d3-521b-431d-9697-d7db47cdd1d8');
+#2019-10-24 22:24:22 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:24:22 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='1b91d8b3-f175-43fe-967e-0651e8d381c3';
+#2019-10-24 22:24:22 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', '1b91d8b3-f175-43fe-967e-0651e8d381c3');
+#2019-10-24 22:24:22 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:24:22 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='5a9322ea-ea6b-4284-9815-c385385dfc06';
+#2019-10-24 22:24:22 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', '5a9322ea-ea6b-4284-9815-c385385dfc06');
+#2019-10-24 22:24:22 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:24:45 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:24:45 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:24:45 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:24:45 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:24:45 | took 3ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 22:24:57 | took 1ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:24:57 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:24:57 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:24:57 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:24:57 | took 4ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:24:57 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 22:24:57 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 22:24:57 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:24:57 | took 4ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 22:24:57 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 22:24:57 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 22:25:05 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='4ac9d421-9b95-43b3-b02b-600748b509af';
+#2019-10-24 22:25:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '4ac9d421-9b95-43b3-b02b-600748b509af');
+#2019-10-24 22:25:05 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:25:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='728dee57-981f-4eaa-96e0-a6cb04fce19a';
+#2019-10-24 22:25:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', '728dee57-981f-4eaa-96e0-a6cb04fce19a');
+#2019-10-24 22:25:05 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:25:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='6b382a41-52e3-4be2-9b7d-a35f4bc4aded';
+#2019-10-24 22:25:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', '6b382a41-52e3-4be2-9b7d-a35f4bc4aded');
+#2019-10-24 22:25:05 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:25:27 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:25:27 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:25:27 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:25:27 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:25:27 | took 2ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 22:25:39 | took 1ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:25:39 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:25:39 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:25:39 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:25:39 | took 3ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:25:39 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 22:25:39 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 22:25:39 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:25:39 | took 3ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 22:25:39 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 22:25:39 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 22:25:44 | took 2ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='7352bbdf-aee2-4fdf-a6a3-97901065e35b';
+#2019-10-24 22:25:44 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', '7352bbdf-aee2-4fdf-a6a3-97901065e35b');
+#2019-10-24 22:25:44 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:25:44 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='b464ed43-26f9-4d28-8837-32bba9690de8';
+#2019-10-24 22:25:44 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', 'b464ed43-26f9-4d28-8837-32bba9690de8');
+#2019-10-24 22:25:44 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:25:44 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='cd3efdfe-825e-46ef-bd2e-a86c49ebff6d';
+#2019-10-24 22:25:44 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', 'cd3efdfe-825e-46ef-bd2e-a86c49ebff6d');
+#2019-10-24 22:25:44 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:25:52 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_;
+#2019-10-24 22:25:52 | took 0ms | commit | connection 7| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:26:24 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:26:24 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:26:24 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:26:24 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:26:24 | took 2ms | statement | connection 9| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-24 22:26:30 | took 1ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:26:30 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:26:30 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:26:30 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:26:30 | took 3ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:26:30 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-24 22:26:30 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-24 22:26:30 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-24 22:26:30 | took 3ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-24 22:26:30 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-24 22:26:30 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-24 22:26:42 | took 2ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_;
+#2019-10-24 22:26:42 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-24 22:28:36 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-24 22:28:36 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-24 22:28:36 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-24 22:28:36 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-24 22:28:36 | took 2ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-29 20:45:22 | took 4ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-29 20:45:22 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-29 20:45:22 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-29 20:45:22 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-29 20:45:22 | took 9ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-29 20:45:22 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-29 20:45:22 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-29 20:45:22 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-29 20:45:22 | took 5ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-29 20:45:22 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-29 20:45:22 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-29 20:45:54 | took 7ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_;
+#2019-10-29 20:45:54 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-29 20:46:39 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-29 20:46:39 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-29 20:46:39 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-29 20:46:39 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-29 20:46:39 | took 4ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-29 20:47:20 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-29 20:47:20 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-29 20:47:20 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-29 20:47:20 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-29 20:47:20 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-29 20:47:20 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-29 20:47:20 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-29 20:47:20 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-29 20:47:20 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-29 20:47:20 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-29 20:47:20 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-29 20:47:30 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_;
+#2019-10-29 20:47:30 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-29 20:48:10 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-29 20:48:10 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-29 20:48:10 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-29 20:48:10 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-29 20:48:10 | took 3ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-29 20:48:19 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-29 20:48:19 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-29 20:48:19 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-29 20:48:19 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-29 20:48:19 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-29 20:48:19 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-29 20:48:19 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-29 20:48:19 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-29 20:48:19 | took 5ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-29 20:48:19 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-29 20:48:19 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-29 20:48:29 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_;
+#2019-10-29 20:48:29 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-29 20:51:01 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-29 20:51:01 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-29 20:51:01 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-29 20:51:01 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-29 20:51:01 | took 4ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-10-29 20:51:09 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-29 20:51:09 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-29 20:51:09 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-29 20:51:09 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-29 20:51:09 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-29 20:51:09 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-10-29 20:51:09 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-10-29 20:51:09 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-10-29 20:51:09 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-10-29 20:51:09 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-10-29 20:51:09 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-10-29 20:51:22 | took 4ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_;
+#2019-10-29 20:51:22 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-10-29 20:52:51 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-10-29 20:52:51 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-10-29 20:52:51 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-10-29 20:52:51 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-10-29 20:52:51 | took 5ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-11-13 20:20:09 | took 5ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:20:09 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:20:09 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:20:09 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:20:09 | took 9ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:20:09 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-11-13 20:20:09 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-11-13 20:20:09 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:20:09 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-11-13 20:20:09 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-11-13 20:20:09 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-11-13 20:25:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:25:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:25:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:25:05 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:25:05 | took 5ms | statement | connection 7| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-11-13 20:25:13 | took 6ms | statement | connection 0| url jdbc:h2:mem:testdb
+CALL SCHEMA()
+CALL SCHEMA();
+#2019-11-13 20:25:13 | took 1ms | statement | connection 0| url jdbc:h2:mem:testdb
+SELECT VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE NAME = 'info.BUILD_ID'
+SELECT VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE NAME = 'info.BUILD_ID';
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+CALL SCHEMA()
+CALL SCHEMA();
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+SELECT USER()
+SELECT USER();
+#2019-11-13 20:25:13 | took 2ms | statement | connection 0| url jdbc:h2:mem:testdb
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=?
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name='PUBLIC';
+#2019-11-13 20:25:13 | took 1ms | commit | connection 0| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=?
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name='PUBLIC';
+#2019-11-13 20:25:13 | took 0ms | commit | connection 0| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLEs WHERE TABLE_schema = ? AND TABLE_TYPE = 'TABLE'
+SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLEs WHERE TABLE_schema = 'PUBLIC' AND TABLE_TYPE = 'TABLE';
+#2019-11-13 20:25:13 | took 0ms | statement | connection 1| url jdbc:h2:mem:testdb
+CALL SCHEMA()
+CALL SCHEMA();
+#2019-11-13 20:25:13 | took 8ms | statement | connection 0| url jdbc:h2:mem:testdb
+CREATE TABLE "PUBLIC"."flyway_schema_history" (
+    "installed_rank" INT NOT NULL,
+    "version" VARCHAR(50),
+    "description" VARCHAR(200) NOT NULL,
+    "type" VARCHAR(20) NOT NULL,
+    "script" VARCHAR(1000) NOT NULL,
+    "checksum" INT,
+    "installed_by" VARCHAR(100) NOT NULL,
+    "installed_on" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "execution_time" INT NOT NULL,
+    "success" BOOLEAN NOT NULL
+)
+CREATE TABLE "PUBLIC"."flyway_schema_history" (
+    "installed_rank" INT NOT NULL,
+    "version" VARCHAR(50),
+    "description" VARCHAR(200) NOT NULL,
+    "type" VARCHAR(20) NOT NULL,
+    "script" VARCHAR(1000) NOT NULL,
+    "checksum" INT,
+    "installed_by" VARCHAR(100) NOT NULL,
+    "installed_on" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "execution_time" INT NOT NULL,
+    "success" BOOLEAN NOT NULL
+);
+#2019-11-13 20:25:13 | took 2ms | statement | connection 0| url jdbc:h2:mem:testdb
+ALTER TABLE "PUBLIC"."flyway_schema_history" ADD CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+ALTER TABLE "PUBLIC"."flyway_schema_history" ADD CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank");
+#2019-11-13 20:25:13 | took 3ms | statement | connection 0| url jdbc:h2:mem:testdb
+CREATE INDEX "PUBLIC"."flyway_schema_history_s_idx" ON "PUBLIC"."flyway_schema_history" ("success")
+CREATE INDEX "PUBLIC"."flyway_schema_history_s_idx" ON "PUBLIC"."flyway_schema_history" ("success");
+#2019-11-13 20:25:13 | took 0ms | commit | connection 0| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+select * from "PUBLIC"."flyway_schema_history" for update
+select * from "PUBLIC"."flyway_schema_history" for update;
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+SELECT "installed_rank","version","description","type","script","checksum","installed_on","installed_by","execution_time","success" FROM "PUBLIC"."flyway_schema_history" WHERE "installed_rank" > -1 ORDER BY "installed_rank"
+SELECT "installed_rank","version","description","type","script","checksum","installed_on","installed_by","execution_time","success" FROM "PUBLIC"."flyway_schema_history" WHERE "installed_rank" > -1 ORDER BY "installed_rank";
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name=?
+SELECT COUNT(*) FROM INFORMATION_SCHEMA.schemata WHERE schema_name='PUBLIC';
+#2019-11-13 20:25:13 | took 0ms | statement | connection 1| url jdbc:h2:mem:testdb
+SET SCHEMA "PUBLIC"
+SET SCHEMA "PUBLIC";
+#2019-11-13 20:25:13 | took 1ms | statement | connection 1| url jdbc:h2:mem:testdb
+create table post (
+    id int PRIMARY KEY
+)
+
+-- /
+-- create table vertex
+--     (vertex_id number generated always as identity
+--      , side varchar2(10) not null unique
+--      , constraint vertex_pk  primary key (vertex_id) )
+-- /
+-- create table polygon_vertices
+--     (polygon_id number not null
+--      , vertex_id number not null
+--      , constraint polygon_vertices_uk unique (polygon_id, vertex_id)
+--      , constraint polygon_vertices_polygon_fk foreign key (polygon_id) references polygon (polygon_id)
+--      , constraint polygon_vertices_vertex_fk foreign key (vertex_id) references vertex(vertex_id)
+--      )
+-- /
+create table post (
+    id int PRIMARY KEY
+)
+
+-- /
+-- create table vertex
+--     (vertex_id number generated always as identity
+--      , side varchar2(10) not null unique
+--      , constraint vertex_pk  primary key (vertex_id) )
+-- /
+-- create table polygon_vertices
+--     (polygon_id number not null
+--      , vertex_id number not null
+--      , constraint polygon_vertices_uk unique (polygon_id, vertex_id)
+--      , constraint polygon_vertices_polygon_fk foreign key (polygon_id) references polygon (polygon_id)
+--      , constraint polygon_vertices_vertex_fk foreign key (vertex_id) references vertex(vertex_id)
+--      )
+-- /;
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+SELECT "installed_rank","version","description","type","script","checksum","installed_on","installed_by","execution_time","success" FROM "PUBLIC"."flyway_schema_history" WHERE "installed_rank" > -1 ORDER BY "installed_rank"
+SELECT "installed_rank","version","description","type","script","checksum","installed_on","installed_by","execution_time","success" FROM "PUBLIC"."flyway_schema_history" WHERE "installed_rank" > -1 ORDER BY "installed_rank";
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+select * from "PUBLIC"."flyway_schema_history" for update
+select * from "PUBLIC"."flyway_schema_history" for update;
+#2019-11-13 20:25:13 | took 2ms | statement | connection 0| url jdbc:h2:mem:testdb
+INSERT INTO "PUBLIC"."flyway_schema_history" ("installed_rank","version","description","type","script","checksum","installed_by","execution_time","success") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+INSERT INTO "PUBLIC"."flyway_schema_history" ("installed_rank","version","description","type","script","checksum","installed_by","execution_time","success") VALUES (1, '1.0', 'createtable', 'SQL', 'V1.0__createtable.sql', -1495602129, 'SA', 3, true);
+#2019-11-13 20:25:13 | took 0ms | commit | connection 1| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:25:13 | took 0ms | commit | connection 0| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+select * from "PUBLIC"."flyway_schema_history" for update
+select * from "PUBLIC"."flyway_schema_history" for update;
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+SELECT "installed_rank","version","description","type","script","checksum","installed_on","installed_by","execution_time","success" FROM "PUBLIC"."flyway_schema_history" WHERE "installed_rank" > -1 ORDER BY "installed_rank"
+SELECT "installed_rank","version","description","type","script","checksum","installed_on","installed_by","execution_time","success" FROM "PUBLIC"."flyway_schema_history" WHERE "installed_rank" > -1 ORDER BY "installed_rank";
+#2019-11-13 20:25:13 | took 0ms | commit | connection 0| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:25:13 | took 0ms | statement | connection 1| url jdbc:h2:mem:testdb
+SET SCHEMA "PUBLIC"
+SET SCHEMA "PUBLIC";
+#2019-11-13 20:25:13 | took 0ms | commit | connection 1| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:25:13 | took 0ms | statement | connection 0| url jdbc:h2:mem:testdb
+SET SCHEMA "PUBLIC"
+SET SCHEMA "PUBLIC";
+#2019-11-13 20:25:13 | took 0ms | commit | connection 0| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:25:14 | took 1ms | statement | connection 6| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-11-13 20:25:43 | took 2ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:25:43 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:25:43 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:25:43 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:25:43 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:25:43 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-11-13 20:25:43 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-11-13 20:25:43 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:25:43 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-11-13 20:25:43 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-11-13 20:25:43 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-11-13 20:27:25 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:27:25 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:27:25 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:27:25 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:27:25 | took 4ms | statement | connection 7| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-11-13 20:28:05 | took 4ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:28:05 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:28:05 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:28:05 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:28:05 | took 9ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:28:05 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-11-13 20:28:05 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-11-13 20:28:05 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:28:05 | took 6ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-11-13 20:28:05 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-11-13 20:28:05 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-11-13 20:29:55 | took 4ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_ limit ?
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_ limit 20;
+#2019-11-13 20:29:56 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:30:18 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:30:18 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:30:18 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:30:18 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:30:18 | took 3ms | statement | connection 8| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-11-13 20:30:38 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:30:38 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:30:38 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:30:38 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:30:38 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:30:38 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-11-13 20:30:38 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-11-13 20:30:38 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:30:38 | took 7ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-11-13 20:30:38 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-11-13 20:30:38 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-11-13 20:30:42 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='data';
+#2019-11-13 20:30:42 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:30:46 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_ limit ?
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_ limit 20;
+#2019-11-13 20:30:46 | took 0ms | commit | connection 7| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:31:00 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_ limit ?
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_ limit 20;
+#2019-11-13 20:31:00 | took 0ms | commit | connection 8| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:31:12 | took 0ms | statement | connection 9| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_;
+#2019-11-13 20:31:12 | took 0ms | commit | connection 9| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:32:33 | took 0ms | statement | connection 10| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:32:33 | took 0ms | statement | connection 10| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:32:33 | took 0ms | statement | connection 10| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:32:33 | took 0ms | statement | connection 10| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:32:33 | took 4ms | statement | connection 11| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-11-13 20:32:53 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:32:53 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:32:53 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:32:53 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:32:53 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:32:53 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-11-13 20:32:53 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-11-13 20:32:53 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:32:53 | took 10ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-11-13 20:32:53 | took 2ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-11-13 20:32:53 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-11-13 20:33:03 | took 4ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='a5519530-c490-4c30-98e8-75b602b69ba0';
+#2019-11-13 20:33:03 | took 1ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Tuan', 'a5519530-c490-4c30-98e8-75b602b69ba0');
+#2019-11-13 20:33:03 | took 1ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:33:03 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='4f06d37d-70b5-4c5f-82d3-2ddca1b7568c';
+#2019-11-13 20:33:03 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Linh', '4f06d37d-70b5-4c5f-82d3-2ddca1b7568c');
+#2019-11-13 20:33:03 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:33:03 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='4e4f7f57-019e-41af-bbb3-2ec4cfbe348e';
+#2019-11-13 20:33:03 | took 0ms | statement | connection 6| url jdbc:h2:mem:testdb
+insert into author (name, id) values (?, ?)
+insert into author (name, id) values ('Cong', '4e4f7f57-019e-41af-bbb3-2ec4cfbe348e');
+#2019-11-13 20:33:03 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:33:18 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_;
+#2019-11-13 20:33:18 | took 0ms | commit | connection 7| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:33:39 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:33:39 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:33:39 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:33:39 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:33:39 | took 4ms | statement | connection 9| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
+#2019-11-13 20:34:00 | took 3ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 20:34:00 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 20:34:00 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 20:34:00 | took 0ms | statement | connection 3| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 20:34:00 | took 8ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table author (id varchar(255) not null, name varchar(255), primary key (id))
+create table author (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:34:00 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id))
+create table post (id varchar(255) not null, name varchar(255), author_id varchar(255), primary key (id));
+#2019-11-13 20:34:00 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null)
+create table post_tag (posts_id varchar(255) not null, tags_id varchar(255) not null);
+#2019-11-13 20:34:00 | took 0ms | statement | connection 4| url jdbc:h2:mem:testdb
+create table tag (id varchar(255) not null, name varchar(255), primary key (id))
+create table tag (id varchar(255) not null, name varchar(255), primary key (id));
+#2019-11-13 20:34:00 | took 5ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author
+alter table post add constraint FK5l759v7apba3lqguc7bp8h456 foreign key (author_id) references author;
+#2019-11-13 20:34:00 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag
+alter table post_tag add constraint FK5bq9coa74htrkd448xxvgbxhs foreign key (tags_id) references tag;
+#2019-11-13 20:34:00 | took 1ms | statement | connection 4| url jdbc:h2:mem:testdb
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post
+alter table post_tag add constraint FKqae2l81twjedahwha90cclvvl foreign key (posts_id) references post;
+#2019-11-13 20:34:06 | took 3ms | statement | connection 6| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id=?
+select author0_.id as id1_0_0_, author0_.name as name2_0_0_ from author author0_ where author0_.id='data';
+#2019-11-13 20:34:06 | took 0ms | commit | connection 6| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:34:10 | took 0ms | statement | connection 7| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_ limit ?
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_ limit 20;
+#2019-11-13 20:34:10 | took 0ms | commit | connection 7| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 20:34:16 | took 0ms | statement | connection 8| url jdbc:h2:mem:testdb
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_ limit ?
+select author0_.id as id1_0_, author0_.name as name2_0_ from author author0_ limit 20;
+#2019-11-13 20:34:16 | took 0ms | commit | connection 8| url jdbc:h2:mem:testdb
+
+;
+#2019-11-13 21:59:45 | took 0ms | statement | connection 9| url jdbc:h2:mem:testdb
+drop table author if exists
+drop table author if exists;
+#2019-11-13 21:59:45 | took 0ms | statement | connection 9| url jdbc:h2:mem:testdb
+drop table post if exists
+drop table post if exists;
+#2019-11-13 21:59:45 | took 0ms | statement | connection 9| url jdbc:h2:mem:testdb
+drop table post_tag if exists
+drop table post_tag if exists;
+#2019-11-13 21:59:45 | took 0ms | statement | connection 9| url jdbc:h2:mem:testdb
+drop table tag if exists
+drop table tag if exists;
+#2019-11-13 21:59:45 | took 7ms | statement | connection 10| url jdbc:h2:mem:testdb
+SHUTDOWN
+SHUTDOWN;
